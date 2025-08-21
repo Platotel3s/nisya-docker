@@ -1,6 +1,6 @@
 # 🚀 Nisya Laravel + Docker Setup  
 
-Halo bestie! 🎉 Ini project Laravel lo bisa langsung gas jalan di **Linux / Windows / Mac** pake **Docker**.  
+Halo Tod! 🎉 Ini project Laravel lo bisa langsung gas jalan di **Linux / Windows / Mac** pake **Docker**.  
 Gak perlu ribet install PHP, Composer, MySQL manual lagi. Semua udah di-bundle 🍱.  
 
 ---
@@ -46,3 +46,13 @@ docker compose exec app php artisan migrate
 ```bash
 http://localhost:8100/
 ```
+
+### 🤝 Trouble?
+Kalo ada error docker not found → berarti Docker lo belum ke-install/ke-run.
+Kalo MySQL error → coba docker compose down -v && docker compose up -d biar reset DB nya.
+
+### 🐳 Kenapa Docker?
+Gak perlu ribet install PHP 8.x, Composer, MySQL manual.
+Project ini bisa lo share ke semua OS (Linux/Windows/Mac), tetep jalan.
+Cuma butuh Docker, beres.
+
