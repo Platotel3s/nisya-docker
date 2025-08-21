@@ -49,10 +49,17 @@ http://localhost:8100/
 
 ### 🤝 Trouble?
 Kalo ada error docker not found → berarti Docker lo belum ke-install/ke-run.
-Kalo MySQL error → coba docker compose down -v && docker compose up -d biar reset DB nya.
+
+Kalo MySQL error → coba:
+```bash
+docker compose down -v && docker compose up -d
+```
+biar reset DB nya.
 
 ### 🐳 Kenapa Docker?
 Gak perlu ribet install PHP 8.x, Composer, MySQL manual.
-Project ini bisa lo share ke semua OS (Linux/Windows/Mac), tetep jalan.
+
+Project ini bisa lo share ke semua OS (Linux/Windows/Mac/FreeBSD), tetep jalan.
+
 Cuma butuh Docker, beres.
 
