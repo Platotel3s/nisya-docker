@@ -1,38 +1,48 @@
+# 🚀 Nisya Laravel + Docker Setup  
 
-# 🚀 Laravel + MariaDB with Docker
-
-Project ini menggunakan **Docker** untuk menjalankan aplikasi Laravel dan database **MariaDB**.  
-Dengan setup ini, kamu tidak perlu lagi menginstal PHP, Composer, atau MySQL secara manual di host machine.  
+Halo bestie! 🎉 Ini project Laravel lo bisa langsung gas jalan di **Linux / Windows / Mac** pake **Docker**.  
+Gak perlu ribet install PHP, Composer, MySQL manual lagi. Semua udah di-bundle 🍱.  
 
 ---
 
-## 📦 Requirements
+## 📦 Apa aja yang lo butuhin?
+1. **Docker** (install [Docker Desktop](https://www.docker.com/products/docker-desktop/))  
+   - Kalo Windows, pastiin **WSL2** udah nyala (biasanya otomatis kok waktu install Docker Desktop).  
+2. **Git** (opsional, kalo lo clone dari repo).  
 
-Sebelum menjalankan project, pastikan sudah menginstal:
+---
 
-- [Docker](https://docs.docker.com/get-docker/) (Linux, Windows, macOS)
-- [Docker Compose](https://docs.docker.com/compose/install/) (biasanya sudah terinstall bersama Docker Desktop)
+## 🛠️ Cara make
 
-### 🐧 Linux
-Install Docker & Compose:
+### 1. Ambil project
+- Kalo zip: ekstrak aja  
+- Kalo git clone:
+  ```bash
+  git clone <link_repo.git>
+  cd nisya
+
+### 2. Bikin file .env
+Copy .env.example jadi .env
+
+Windows:
+```powershell
+copy .env.example .env
+```
+
+Linux / Mac:
 ```bash
-sudo apt update
-sudo apt install docker.io docker-compose -y
+cp .env.example .env
 ```
-Tambahkan user ke group Docker 
-
+### 3. Jalanin Docker
+```bash
+docker compose up -d
 ```
-sudo usermod -aG docker $USER
+### Migrate Database
+```bash
+docker compose exec app php artisan migrate
 ```
-logout & login ulang.
 
-
-# 🪟 Windows
-
-1. Install Docker Desktop di halaman Resminya
-2. Pastikan WSL2 aktif
-3. Jalankan Docker Desktop sebelum menjalankan perintah
-
-# 🍎 MacOS 
-1. Install Docker Desktop for Mac
-2. Jalankan Docker Desktop sebelum menjalankan perintah.
+### 5. Akses Hasilnya di:
+```bash
+http://localhost:8100/
+```
