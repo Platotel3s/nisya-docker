@@ -57,7 +57,7 @@ class BukuController extends Controller
             'author'=>'required',
             'kategori'=>'required',
             'qty'=>'required',
-            'img'=>'required|mimes:png,jpg,jpeg|max:2048',
+            'img'=>'nullable',
         ]);
         $pathImage=null;
         if ($request->hasFile('img')) {
@@ -70,7 +70,8 @@ class BukuController extends Controller
             'judul'=>$request->judul,
             'author'=>$request->author,
             'kategori'=>$request->kategori,
-            'img'=>$pathImage,
+            'qty'=>$request->qty,
+            #'img'=>$pathImage,
         ]);
         return redirect()->route('index.buku');
     }

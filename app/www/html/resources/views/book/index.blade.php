@@ -34,7 +34,7 @@
                                             <td>{{ $buku->qty }}</td>
                                             <td>
                                                 @if($buku->img)
-                                                    <img src="{{ asset('storage/'.$buku->img) }}" alt="Cover Buku" class="img-thumbnail" width="80">
+                                                    <img src="{{ asset('storage/'.$buku->img) }}" alt="Cover Buku" class="img-thumbnail" width="120">
                                                 @else
                                                     <span class="text-muted">No image</span>
                                                 @endif
